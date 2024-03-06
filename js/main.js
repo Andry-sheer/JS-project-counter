@@ -8,71 +8,33 @@ for (i = 0; i <= 20; i++) {
 
 //?----- 2 DOLLARS ------------------------------------------->
 console.log(`\nDOLLARS:`);
-console.log('1 dollar cost = 27 UAH');
-let oneDollar = 27;
-for (let j = 0; j <= 10; j*=2){
-  oneDollar+=9;
+console.log('"1: dollar cost = 27 UAH"');
+let dollar;
+let dollarCounter;
 
-  if (oneDollar === 270){
-    console.log(`10 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
+for (let j = 0; j <= 100; j+=10){
+  dollarCounter = j+10; //? (для відліку не від '0' а від '10')!!!
+  dollar = dollarCounter*27;
 
-  if (oneDollar === 540) {
-    console.log(`20 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
-
-  if (oneDollar === 810) {
-    console.log(`30 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
-
-  if (oneDollar === 1080) {
-    console.log(`40 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
-
-  if (oneDollar === 1350) {
-    console.log(`50 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
-
-  if (oneDollar === 1620) {
-    console.log(`60 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
-
-  if (oneDollar === 1890) {
-    console.log(`70 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
-
-  if (oneDollar === 2160) {
-    console.log(`80 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
-
-  if (oneDollar === 2430) {
-    console.log(`90 dollars cost = ${oneDollar} UAH`);
-    continue;
-  }
-
-  if (oneDollar === 2700) {
-    console.log(`100 dollars cost = ${oneDollar} UAH`);
+  if (dollarCounter > 100){
     break;
+  }
+  if (dollarCounter <= 270){
+    console.log(` ${dollarCounter}$ dollars cost = ${dollar} UAH`);
+    continue;
   }
 }
 
 
 
-//?----- 3 SQRT NUMBERS ------------------------------------------->
-  let n;
+//?----- 3 SQRT NUMBERS (UPDATE) ------------------------------------------->
+  let sNumber = +prompt(`(SQRT NUMBERS) Ведіть число: `);
+  let sqrtNumber = Math.sqrt(sNumber);
+
   console.log(`\nSQUARED:`);
-  for (let x = 1; x <= 100; x++) {
-    n = x**2;
-    console.log(`squared of number: ${x} = ${n}`);
-  if (n === 100){
+  for (let x = 1; x <= sqrtNumber; x++) {
+    console.log(x);
+  if (sqrtNumber >= 100){
       break;
     }
   }
@@ -104,18 +66,18 @@ else if (numb > 1) {
 
 
 //?----- 5 INFINITY ------------------------------------------->
-let w = +prompt(`(ЗВЕДЕННЯ ЧИСЛА У 3 СТЕПЕНЬ) введіть число:`);
-let cube = false;
+let primeNamber = +prompt(`(ЗВЕДЕННЯ ЧИСЛА У 3 СТЕПЕНЬ) введіть число:`);
+let numberFalse = false;
 
-for (g = 0; g < w; g++) {
+for (g = 0; g < primeNamber; g++) {
 
-  if (3**g === w){
-    cube = true;
-    alert(`${w} = (3 ** ${g})`);
+  if (3**g === primeNamber){
+    numberFalse = true;
+    alert(`${primeNamber} = (3 ** ${g})`);
     break;
   }
 }
 
-if (!cube) {
-  alert(` це число ${w} не являеться у 3 степені`);
+if (!numberFalse) {
+  alert(` це число ${primeNamber} не являеться у 3 степені`);
 }
